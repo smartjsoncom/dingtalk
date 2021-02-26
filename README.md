@@ -20,7 +20,7 @@ composer require smartjson/ding-notice
 
 # 在非laravel项目中使用
 ```php
-$ding = new \DingNotice\DingTalk([
+$ding = new \Smartjson\DingTalk([
     "default" => [
         'enabled' => true,
         'token' => "you-push-token",
@@ -37,7 +37,7 @@ $ding->text('我就是我, 是不一样的烟火');
 
 安装成功后执行
 ```php
-php artisan vendor:publish --provider="DingNotice\DingNoticeServiceProvider"
+php artisan vendor:publish --provider="Smartjson\DingNoticeServiceProvider"
 
 ```
 会自动将`ding.php`添加到您项目的配置文件当中
