@@ -14,7 +14,7 @@ class DingNoticeServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/ding.php' => base_path('config/ding.php'),
+            __DIR__ . '/../config/dingtalk.php' => base_path('config/dingtalk.php'),
         ]);
     }
 
