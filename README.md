@@ -14,13 +14,13 @@ ding-notie 是一款钉钉机器人消息发送的Laravel扩展，您可以通�
 # 安装
 
 ```php
-composer require smartjson/ding-notice
+composer require SmartJson/ding-notice
 
 ```
 
 # 在非laravel项目中使用
 ```php
-$ding = new \Smartjson\DingTalk([
+$ding = new \SmartJson\DingTalk([
     "default" => [
         'enabled' => true,
         'token' => "you-push-token",
@@ -37,7 +37,7 @@ $ding->text('我就是我, 是不一样的烟火');
 
 安装成功后执行
 ```php
-php artisan vendor:publish --provider="Smartjson\DingNoticeServiceProvider"
+php artisan vendor:publish --provider="SmartJson\DingNoticeServiceProvider"
 
 ```
 会自动将`ding.php`添加到您项目的配置文件当中
