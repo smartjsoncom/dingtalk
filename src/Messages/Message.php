@@ -30,7 +30,6 @@ abstract class Message
 
     public function getBody()
     {
-
         if (empty($this->at)) {
             $this->sendAt();
         }

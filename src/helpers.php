@@ -2,15 +2,14 @@
 
 use SmartJson\DingTalk;
 
-if (!function_exists('ding')){
+if (!function_exists('ding')) {
 
     /**
      * @return bool|DingTalk
      */
-    function ding(){
-
+    function ding()
+    {
         $arguments = func_get_args();
-
         $dingTalk = app(DingTalk::class);
 
         if (empty($arguments)) {
@@ -21,6 +20,5 @@ if (!function_exists('ding')){
             $robot = $arguments[1] ?? 'default';
             return $dingTalk->with($robot)->text($arguments[0]);
         }
-
     }
 }

@@ -72,8 +72,7 @@ class DingTalk
      */
     public function at($mobiles = [], $atAll = false)
     {
-        $this->dingTalkService
-            ->setAt($mobiles, $atAll);
+        $this->dingTalkService->setAt($mobiles, $atAll);
         return $this;
     }
 
@@ -86,9 +85,7 @@ class DingTalk
      */
     public function link($title, $text, $url, $picUrl = '')
     {
-        return $this->dingTalkService
-            ->setLinkMessage($title, $text, $url, $picUrl)
-            ->send();
+        return $this->dingTalkService->setLinkMessage($title, $text, $url, $picUrl)->send();
     }
 
     /**
@@ -98,9 +95,7 @@ class DingTalk
      */
     public function markdown($title, $markdown)
     {
-        return $this->dingTalkService
-            ->setMarkdownMessage($title, $markdown)
-            ->send();
+        return $this->dingTalkService->setMarkdownMessage($title, $markdown)->send();
     }
 
     /**
@@ -121,8 +116,7 @@ class DingTalk
      */
     public function feed()
     {
-        return $this->dingTalkService
-            ->setFeedCardMessage();
+        return $this->dingTalkService->setFeedCardMessage();
     }
 
 }
