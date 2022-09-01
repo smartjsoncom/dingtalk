@@ -37,7 +37,7 @@ class DingNoticeServiceProvider extends ServiceProvider
     protected function registerLaravelBindings()
     {
         $this->app->singleton(DingTalk::class, function ($app) {
-            return new DingTalk($app['config']['ding']);
+            return new DingTalk($app['config']['dingtalk']);
         });
     }
 

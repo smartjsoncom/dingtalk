@@ -35,23 +35,20 @@ class DingTalk
      * @param string $robot
      * @return $this
      */
-    public function with($robot = 'default')
+    public function with(string $robot = 'default')
     {
         $this->robot = $robot;
         $this->dingTalkService = new DingTalkService($this->config[$robot], $this->client);
         return $this;
     }
 
-
     /**
      * @param string $content
-     * @return mixed
+     * @return array|bool
      */
-    public function text($content = '')
+    public function text(string $content = '')
     {
-        return $this->dingTalkService
-            ->setTextMessage($content)
-            ->send();
+        return $this->dingTalkService->setTextMessage($content)->send();
     }
 
     /**
@@ -61,8 +58,7 @@ class DingTalk
      */
     public function action($title, $text)
     {
-        return $this->dingTalkService
-            ->setActionCardMessage($title, $text);
+        return $this->dingTalkService->setActionCardMessage($title, $text);
     }
 
     /**
